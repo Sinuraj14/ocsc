@@ -1,0 +1,94 @@
+<html>
+  <style>
+    * {
+    box-sizing: border-box
+}
+.image-slideshow {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+img {
+  width: 100%
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 1}
+}
+  </style>
+  <body>
+    <div class="image-slideshow">
+      <div class="image fade">
+        <img src="nocphotos/IMG_7215.jpg" alt="1">
+      </div>        
+      <div class="image fade">
+        <img src="nocphotos/DSC_6670.JPG" alt="1">
+      </div>
+      <div class="image fade">
+        <img src="nocphotos/IMG_3080.jpg" alt="1">
+      </div>        
+      <div class="image fade">
+        <img src="nocphotos/IMG_7215.jpg" alt="1">
+      </div>
+      <div class="image fade">
+        <img src="nocphotos/IMG_7215.jpg" alt="1">
+      </div>        
+      <div class="image fade">
+        <img src="nocphotos/IMG_7215.jpg" alt="1">
+      </div>
+      <div class="image fade">
+        <img src="nocphotos/IMG_7215.jpg" alt="1">
+      </div>        
+      <div class="image fade">
+        <img src="nocphotos/IMG_7215.jpg" alt="1">
+      </div>
+      <div class="image fade">
+        <img src="nocphotos/IMG_7215.jpg" alt="1">
+      </div>        
+      <div class="image fade">
+        <img src="nocphotos/IMG_7215.jpg" alt="1">
+      </div>
+      <div class="image fade">
+        <img src="nocphotos/IMG_7215.jpg" alt="1">
+      </div>        
+      <div class="image fade">
+        <img src="nocphotos/IMG_7215.jpg" alt="1">
+      </div>
+      <div class="image fade">
+        <img src="nocphotos/IMG_7215.jpg" alt="1">
+      </div>        
+      <div class="image fade">
+        <img src="nocphotos/IMG_7215.jpg" alt="1">
+      </div>
+      <div class="image fade">
+        <img src="nocphotos/IMG_7215.jpg" alt="1">
+      </div>        
+      <div class="image fade">
+        <img src="nocphotos/IMG_7215.jpg" alt="1">
+      </div>
+      
+    </div>
+    <script>
+      let index = 0;
+displayImages();
+function displayImages() {
+  let i;
+  const images = document.getElementsByClassName("image");
+  for (i = 0; i < images.length; i++) {
+    images[i].style.display = "none";
+  }
+  index++;
+  if (index > images.length) {
+    index = 1;
+  }
+  images[index-1].style.display = "block";
+  setTimeout(displayImages, 2000); 
+}
+    </script>
+  </body>
+</html>
+
